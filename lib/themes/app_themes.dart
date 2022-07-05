@@ -3,8 +3,8 @@ import 'package:flutter/material.dart';
 
 class AppTheme {
   
-  static const Color primaryColor   = Color(0xff8FC6BB);
-  static const Color secondaryColor = Color(0xffC68F9A);
+  static const Color primaryColor   = Color(0xff194775);
+  static const Color secondaryColor = Color(0xffff8800);
 
   static final ThemeData theme = ThemeData.light().copyWith(
     colorScheme: const ColorScheme.light().copyWith(
@@ -20,7 +20,9 @@ class AppTheme {
     ),
     tabBarTheme: const TabBarTheme(
       labelColor: secondaryColor,
-      unselectedLabelColor: Colors.white
+      unselectedLabelColor: Colors.white,
+      labelStyle: TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
+      unselectedLabelStyle: TextStyle(fontSize: 16)
     )
   );
 
