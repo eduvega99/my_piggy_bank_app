@@ -1,7 +1,4 @@
-import 'dart:math';
-
 import 'package:flutter/material.dart';
-import 'package:my_piggy_bank_app/themes/app_themes.dart';
 
 
 class HistoryList extends StatelessWidget {
