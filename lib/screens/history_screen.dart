@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:my_piggy_bank_app/themes/app_themes.dart';
+import 'package:my_piggy_bank_app/widgets/widgets.dart';
 
 
 class HistoryScreen extends StatelessWidget {
@@ -23,10 +24,11 @@ class HistoryScreen extends StatelessWidget {
           ),
         ),
         body: const TabBarView(
+          physics: BouncingScrollPhysics(),
           children: [
-            Text('Todos'),
-            Text('Gastos'),
-            Text('Ingresos'),
+            HistoryList(),
+            HistoryList(),
+            HistoryList()
           ]
         )
        ),
