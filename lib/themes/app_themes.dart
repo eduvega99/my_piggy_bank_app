@@ -11,19 +11,40 @@ class AppTheme {
       primary: primaryColor,
       secondary: secondaryColor
     ),
+
     appBarTheme: const AppBarTheme(
       centerTitle: true
     ),
+
     floatingActionButtonTheme: const FloatingActionButtonThemeData(
       backgroundColor: primaryColor,
       foregroundColor: Colors.white
     ),
+
     tabBarTheme: const TabBarTheme(
       labelColor: secondaryColor,
       unselectedLabelColor: Colors.white,
       labelStyle: TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
       unselectedLabelStyle: TextStyle(fontSize: 16)
+    ),
+
+    inputDecorationTheme: InputDecorationTheme(
+      alignLabelWithHint: true,
+      enabledBorder: _inputBorder,
+      focusedBorder: _inputBorder,
+      focusedErrorBorder: _errorBorder,
+      errorBorder: _errorBorder
     )
+  );
+
+  static final _inputBorder = OutlineInputBorder(
+    borderSide: const BorderSide(width: 2, color: primaryColor),
+    borderRadius: BorderRadius.circular(15)
+  );
+
+  static final _errorBorder = OutlineInputBorder(
+    borderSide: const BorderSide(width: 2, color: Colors.red),
+    borderRadius: BorderRadius.circular(15)
   );
 
 }

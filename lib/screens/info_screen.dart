@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import 'package:my_piggy_bank_app/widgets/transaction_dialog.dart';
+
 
 class InfoScreen extends StatelessWidget {
 
@@ -8,11 +10,16 @@ class InfoScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      resizeToAvoidBottomInset: false,
       appBar: AppBar(title: const Text('My Piggy Bank')),
       body: const _Info(),
       floatingActionButton: FloatingActionButton(
-        child: const Icon(Icons.mood_rounded),
-        onPressed: () {},
+        child: const Icon(Icons.credit_card_rounded),
+        onPressed: () => showDialog(
+          context: context, 
+          barrierDismissible: false,
+          builder: ( _ ) => const TransactionDialog()
+        )
       )
     );
   }

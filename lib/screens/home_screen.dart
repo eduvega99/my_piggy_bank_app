@@ -12,6 +12,7 @@ class HomeScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     PageController pageController = PageController(initialPage: 0);
     return Scaffold(
+      resizeToAvoidBottomInset: false,
       body: PageView(
         controller: pageController,
         scrollDirection: Axis.vertical,
