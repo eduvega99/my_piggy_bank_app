@@ -52,33 +52,37 @@ class _TransactionForm extends StatelessWidget {
       child: ListView(
         physics: const BouncingScrollPhysics(),
         children: [
-          const SizedBox(height: 15),
+          const SizedBox(height: 5),
+          
           TextFormField(
+            decoration: const InputDecoration(labelText: 'Fecha'),
             textInputAction: TextInputAction.next,
             controller: dateController,
             onTap: () => _pickDateTime(),
-            decoration: const InputDecoration(
-              labelText: 'Fecha'
-            ),
+            validator: (value) => _validationIsNotEmpty(value, 'Seleccione una fecha')
           ),
+
           const SizedBox(height: 15),
+          
           TextFormField(
-            textInputAction: TextInputAction.next,
+            decoration: const InputDecoration(labelText: 'Cantidad'),
             keyboardType: TextInputType.number,
-            decoration: const InputDecoration(
-              labelText: 'Cantidad',
-            ),
+            textInputAction: TextInputAction.next,
+            validator: (value) => isValidAmountFormat(value) ? null : 'La cantidad no tiene un formato válido'
           ),
+
           const SizedBox(height: 15),
+          
           TextFormField(
-            textInputAction: TextInputAction.done,
+            decoration: const InputDecoration(labelText: 'Concepto'),
             keyboardType: TextInputType.multiline,
             maxLines: 3,
-            decoration: const InputDecoration(
-              labelText: 'Concepto',
-            ),
+            textInputAction: TextInputAction.done,
+            validator: (value) => _validationIsNotEmpty(value, 'El concepto no puede estar vacío')
           ),
+
           const SizedBox(height: 15),
+          
           ElevatedButton(
             child: const Text('Guardar'),
             onPressed: () => _formKey.currentState?.validate()
@@ -103,6 +107,19 @@ class _TransactionForm extends StatelessWidget {
     final time = await showTimePicker(context: _context, initialTime: TimeOfDay.now());
     if (time == null) return null;
     return DateTime(date.year, date.month, date.day, time.hour, time.hour); 
+  }
+
+  String? _validationIsNotEmpty(String? value, String message) {
+    if (value == null || value.trim().isEmpty) {
+      return message;
+    }
+    return null;
+  }
+
+  bool isValidAmountFormat(String? value) {
+    String pattern = r'^([0-9]+)(.[0-9]{1,2})?$';
+    RegExp regExp  = RegExp(pattern);
+    return value != null && regExp.hasMatch(value);
   }
 
 }
