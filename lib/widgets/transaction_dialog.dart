@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
+
 import 'package:intl/intl.dart';
+
+import 'package:my_piggy_bank_app/widgets/widgets.dart';
 
 
 class TransactionDialog extends StatelessWidget {
@@ -52,7 +55,9 @@ class _TransactionForm extends StatelessWidget {
       child: ListView(
         physics: const BouncingScrollPhysics(),
         children: [
-          const SizedBox(height: 5),
+          const TransactionTypeSelector(),
+
+          const SizedBox(height: 15),
           
           TextFormField(
             decoration: const InputDecoration(labelText: 'Fecha'),
