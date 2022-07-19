@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
+
 import 'package:intl/intl.dart';
+
+import 'package:my_piggy_bank_app/widgets/widgets.dart';
 
 
 class TransactionDialog extends StatelessWidget {
@@ -52,12 +55,15 @@ class _TransactionForm extends StatelessWidget {
       child: ListView(
         physics: const BouncingScrollPhysics(),
         children: [
-          const SizedBox(height: 5),
+          const TransactionTypeSelector(),
+
+          const SizedBox(height: 15),
           
           TextFormField(
             decoration: const InputDecoration(labelText: 'Fecha'),
             textInputAction: TextInputAction.next,
             controller: dateController,
+            enableInteractiveSelection: false,
             onTap: () => _pickDateTime(),
             validator: (value) => _validationIsNotEmpty(value, 'Seleccione una fecha')
           ),
@@ -83,6 +89,8 @@ class _TransactionForm extends StatelessWidget {
 
           const SizedBox(height: 15),
           
+          TransactionCategorySelector(),
+
           ElevatedButton(
             child: const Text('Guardar'),
             onPressed: () => _formKey.currentState?.validate()

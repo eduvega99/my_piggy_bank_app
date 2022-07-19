@@ -34,17 +34,22 @@ class AppTheme {
       focusedBorder: _inputBorder,
       focusedErrorBorder: _errorBorder,
       errorBorder: _errorBorder
+    ),
+
+    toggleButtonsTheme: ToggleButtonsThemeData(
+      borderWidth: 2,
+      borderRadius: BorderRadius.circular(10),
     )
   );
 
   static final _inputBorder = OutlineInputBorder(
     borderSide: const BorderSide(width: 2, color: primaryColor),
-    borderRadius: BorderRadius.circular(15)
+    borderRadius: BorderRadius.circular(10)
   );
 
   static final _errorBorder = OutlineInputBorder(
     borderSide: const BorderSide(width: 2, color: Colors.red),
-    borderRadius: BorderRadius.circular(15)
+    borderRadius: BorderRadius.circular(10)
   );
 
 }
