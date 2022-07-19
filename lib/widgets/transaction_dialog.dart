@@ -88,6 +88,8 @@ class _TransactionForm extends StatelessWidget {
 
           const SizedBox(height: 15),
           
+          TransactionCategorySelector(),
+
           ElevatedButton(
             child: const Text('Guardar'),
             onPressed: () => _formKey.currentState?.validate()
