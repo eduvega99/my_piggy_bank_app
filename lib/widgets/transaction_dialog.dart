@@ -63,6 +63,7 @@ class _TransactionForm extends StatelessWidget {
             decoration: const InputDecoration(labelText: 'Fecha'),
             textInputAction: TextInputAction.next,
             controller: dateController,
+            enableInteractiveSelection: false,
             onTap: () => _pickDateTime(),
             validator: (value) => _validationIsNotEmpty(value, 'Seleccione una fecha')
           ),
