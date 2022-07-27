@@ -38,7 +38,7 @@ class DatabaseConnection {
         date TEXT,
         description TEXT,
         type INTEGER,
-        categoryId INTEGER 
+        category_id INTEGER 
       )
     ''');
   }

@@ -26,11 +26,11 @@ class Transaction {
   );
 
   Map<String, dynamic> toJson() => {
-    'id':       id,
-    'amount':   amount.toString(),
-    'date':     date,
-    'type':     type,
-    'category': category,
+    'id':     id,
+    'amount': amount.toString(),
+    'date':   date,
+    'type':   type,
+    'category_id': category,
     'description': description
   };
 
