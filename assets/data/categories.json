@@ -1,0 +1,58 @@
+[
+    {
+        "id": 0,
+        "name": "Salud e higiene",
+        "icon": 58262,
+        "iconColor": 4283215696,
+        "backgroundColor": 4291356361
+    },
+    {
+        "id": 1,
+        "name": "Alimentación",
+        "icon": 58674,
+        "iconColor": 4294940672,
+        "backgroundColor": 4294959282
+    },
+    {
+        "id": 2,
+        "name": "Transporte",
+        "icon": 57815,
+        "iconColor": 4288423856,
+        "backgroundColor": 4292984551
+    },
+    {
+        "id": 3,
+        "name": "Supermercado",
+        "icon": 58780,
+        "iconColor": 4282339765,
+        "backgroundColor": 4291152617
+    },
+    {
+        "id": 4,
+        "name": "Cuentas y pagos",
+        "icon": 58636,
+        "iconColor": 4280391411,
+        "backgroundColor": 4290502395
+    },
+    {
+        "id": 5,
+        "name": "Compras",
+        "icon": 58778,
+        "iconColor": 4286141768,
+        "backgroundColor": 4292332744
+    },
+    {
+        "id": 6,
+        "name": "Ocio",
+        "icon": 983866,
+        "iconColor": 4293467747,
+        "backgroundColor": 4294491088
+    },
+    {
+        "id": 7,
+        "name": "Otros",
+        "icon": 58370,
+        "iconColor": 4278228616,
+        "backgroundColor": 4289912795
+    }
+]
