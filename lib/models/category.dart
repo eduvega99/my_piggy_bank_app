@@ -17,4 +17,12 @@ class Category {
     required this.backgroundColor
   });
   
+  factory Category.fromJson(Map<String, dynamic> json) => Category(
+    id:   json['id'], 
+    name: json['name'], 
+    icon: IconData(json['icon'], fontFamily: 'MaterialIcons'), 
+    iconColor: Color(json['iconColor']), 
+    backgroundColor: Color(json[ 'backgroundColor'])
+  );
+
 } 
